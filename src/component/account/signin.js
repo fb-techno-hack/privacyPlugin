@@ -37,10 +37,12 @@ class SignInForm extends Component {
     const { email, password } = this.state;
     const { push } = this.props.history;
 
-    auth.doSignInWithEmailAndPassword(email, password).then(() => {
-      this.setState(() => ({ email: '', password: '', error: null }));
-      push('/');
-    });
+    auth.doSignInWithEmailAndPassword(email, password)
+      .then((res) => {
+        console.log(res);
+        this.setState(() => ({ email: '', password: '', error: null }));
+        push('/home');
+      });
   };
 
   change (e){

@@ -31,18 +31,8 @@ class SignUpForm extends Component {
     const { username, email, passwordOne } = this.state;
     const { push } = this.props.history;
 
-    auth.doCreateUserWithEmailAndPassword(email, passwordOne).then(authUser => {
-      db.doCreateUser(authUser.uid, username, email).then(() => {
-        this.setState(() => ({
-          username: '',
-          email: '',
-          passwordOne: '',
-          passwordTwo: '',
-          error: null,
-        }));
-        push('/');
-      });
-    });
+    auth.doCreateUserWithEmailAndPassword(email, passwordOne);
+    push('/info');
   };
 
   change (e) {

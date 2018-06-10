@@ -5,6 +5,7 @@ import { renderIf } from '../../lib/utils';
 import SelectBox from '../select-box/index';
 import { Link, Redirect } from 'react-router-dom';
 import * as roomActions from  '../../action/make-room';
+import * as firebase from '../../util/fire';
 
 class Landing extends React.Component {
   constructor(props) {
@@ -35,6 +36,8 @@ class Landing extends React.Component {
       race: '',
       age: '',
     });
+
+    
   }
 
   render() {
