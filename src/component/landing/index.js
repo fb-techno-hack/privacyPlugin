@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { renderIf } from '../../lib/utils';
 import SelectBox from '../select-box/index';
 import { Link, Redirect } from 'react-router-dom';
-import * as roomActions from  '../../action/make-room';
 
 class Landing extends React.Component {
   constructor(props) {

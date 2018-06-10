@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link, withRouter, Redirect } from 'react-router-dom';
 import { Paper, FlatButton, RaisedButton, TextField } from 'material-ui';
 import { styles } from './assets';
 import './account.scss';
-
+import { renderIf } from '../../lib/utils';
 import { auth, db } from '../../util/fire';
 
 const SignUpPage = ({ history }) => (
@@ -20,6 +20,7 @@ class SignUpForm extends Component {
       email: '',
       passwordOne: '',
       passwordTwo: '',
+      redirect: false,
     };
 
     this.submit = this.submit.bind(this);
@@ -39,8 +40,9 @@ class SignUpForm extends Component {
           passwordOne: '',
           passwordTwo: '',
           error: null,
+          redirect: true,
         }));
-        push('/');
+        push('/Landing');
       });
     });
   };
@@ -79,6 +81,7 @@ class SignUpForm extends Component {
         ))}
 
         <RaisedButton label="Sign Up" type="submit" />
+        {renderIf(this.state.redirect, <Redirect to="/Landing" />)}
       </form>
     );
   }
