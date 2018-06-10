@@ -3,7 +3,8 @@ import '../style/main.scss';
 
 import React from 'react';
 import Info from './info';
-import Content from './content';
+// import Content from './content';
+import Home from './home';
 import Nav from '../component/nav/index';
 import {Provider} from 'react-redux';
 import {BrowserRouter, Route, Redirect} from 'react-router-dom';
@@ -54,7 +55,7 @@ class App extends React.Component {
           <BrowserRouter>
             <React.Fragment>
               <Nav />
-              <Route exact path="/" component={Content}/>
+              <Route exact path="/" component={Home}/>
               <Route path="/logo" component={Logo} />
               <Route exact path="/sign-in" render={()=><SignInPage Authenticated={this.state.Authenticated} someProp={100}/>} />
               <Route exact path="/sign-up" component={SignUpPage} />

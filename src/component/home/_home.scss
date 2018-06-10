@@ -1,0 +1,150 @@
+// .h1 {
+//     background-image: url("../../assets/bg-img2.jpg");
+//     background-repeat: repeat-y;
+//     background-position: center;
+//     background-size: cover;
+//     height: 100%;
+//     padding-bottom: 4em;
+//   }
+  .container {
+      width: 100%;
+  }
+  .h3 {
+    background-color: black;
+  }
+  
+  .h1headinga {
+    padding-top: 1em;
+    font-size: 10em;
+    color: rgb(75, 187, 206);
+    text-align: center;
+    color: #fff;
+  }
+  .h1headingb {
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+    padding-bottom: 25em;
+  }
+  
+  .headinghome {
+    color: rgb(75, 187, 206);
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-top: 5em;
+    padding-bottom: 5em;
+  }
+  
+  .logosize {
+    width: 20em;
+  }
+  
+  .aboutheading {
+    padding-top: 100px;
+    text-align: center;
+    font-size: 50px;
+    background-color: #fff;
+    color: rgb(75, 187, 206);
+    background-color: #333;
+  }
+  
+  .boxabout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+  }
+  
+  .teamimg {
+    margin-top: 60px;
+    padding: 70px;
+    width: 10em;
+    margin-left: 40px;
+    
+  }
+  
+  .boxabouttext {
+    width: 250px;
+    height: 140px;
+    padding-right: 100px;
+    color: rgb(75, 187, 206);
+    margin-bottom: 100px;
+    margin-left: 60px;
+  }
+  .boxabouttext1 {
+    width: 250px;
+    height: 140px;
+    padding-right: 100px;
+    color: rgb(75, 187, 206);
+    margin-bottom: 100px;
+    margin-left: 150px;
+  }
+  
+  .sorting-buttons {
+    margin-top: 30px;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .float-right {
+    float: right;
+  }
+  
+  li a:hover {
+    background-color: rgb(75, 187, 206);
+  }
+  
+  #custom-type-options {
+    background-color: #fff;
+  }
+  
+  .search-ul {
+    background-color: #aaa;
+  }
+  
+  .application-main {
+    margin-bottom: 100px;
+  }
+  
+  .h2 {
+    width: 100%;  
+    margin-bottom: 10px;
+  }
+ .bgImg1 {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+
+ }
+
+ .p-banner {
+     width: 5em;
+ }
