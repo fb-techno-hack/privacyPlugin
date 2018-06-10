@@ -2,14 +2,31 @@ import '../style/base/_reset.scss';
 import '../style/main.scss';
 
 import React from 'react';
-import Landing from './landing';
-import Content from './content';
+import Info from './info';
+import Download from './download/index';
+// import Content from './content';
+import Home from './home';
 import Nav from '../component/nav/index';
 import {Provider} from 'react-redux';
 import {BrowserRouter, Route, Redirect} from 'react-router-dom';
 import { grey800 } from 'material-ui/styles/colors';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
+import { zIndex } from 'material-ui/styles';
+import withAuthentication from './account/session/with-authentication';
+import SignUpPage from './account/signup';
+import SignInPage from './account/signin';
+import PasswordForgetPage from './account/password-forget';
+import Account from './account/account';
+import Logo from './account/landing';
+
+const containerStyle = {
+  paddingTop: '7em',
+  textAlign: 'center',
+  margin: '0 auto',
+  zIndex: '10',
+};
 
 const muiTheme = getMuiTheme({
   palette: {
@@ -25,6 +42,12 @@ const muiTheme = getMuiTheme({
 
 
 class App extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      Authenticated: false,
+    };
+  }
 
   render() {
     return (
@@ -33,9 +56,14 @@ class App extends React.Component {
           <BrowserRouter>
             <React.Fragment>
               <Nav />
-              <Route exact path="/" component={Content}/>
-              <Route exact path="/Landing" component={Landing}/>
-              {/* <Route exact path="/JoinRoom" component={() => store.getState().socket ? <JoinRoom /> : <Redirect to="/" />}/> */}
+              <Route exact path="/" component={Home}/>
+              <Route path="/logo" component={Logo} />
+              <Route exact path="/sign-in" render={()=><SignInPage Authenticated={this.state.Authenticated} someProp={100}/>} />
+              <Route exact path="/sign-up" component={SignUpPage} />
+              <Route exact path="/pw-forget" component={PasswordForgetPage} />
+              <Route exact path="/account" component={Account} />
+              <Route exact path="/info" component={Info}/>
+              <Route exact path="/download" component={Download}/>
             </React.Fragment>
           </BrowserRouter>
         </MuiThemeProvider>

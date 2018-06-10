@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { renderIf } from '../../lib/utils';
 import SelectBox from '../select-box/index';
 import { Link, Redirect } from 'react-router-dom';
+import { doAddSite } from '../../util/db';
 
 class Landing extends React.Component {
   constructor(props) {
@@ -26,7 +27,7 @@ class Landing extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log('this state handlesubmit', this.state);
+    doAddSite(this.state.location, this.state.education, this.state.race, this.state.age);
     this.setState({
       redirect: false,
       location: '',
@@ -34,6 +35,7 @@ class Landing extends React.Component {
       race: '',
       age: '',
     });
+    this.props.history.push('/download');
   }
 
   render() {

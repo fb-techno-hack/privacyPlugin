@@ -7,6 +7,7 @@ import SignInPage from './signin';
 import PasswordForgetPage from './password-forget';
 import Account from './account';
 import Landing from './landing';
+import Home from '../landing/index';
 
 const containerStyle = {
   paddingTop: '7em',
@@ -23,7 +24,8 @@ const Login = () => (
         <Route exact path="/sign-in" component={SignInPage} />
         <Route exact path="/sign-up" component={SignUpPage} />
         <Route exact path="/pw-forget" component={PasswordForgetPage} />
-        <Route exact path="account" component={Account} />
+        <Route exact path="/account" component={Account} />
+        <Route exact path="/home" component={Home}/>
       </div>
     </BrowserRouter>
   </Fragment>

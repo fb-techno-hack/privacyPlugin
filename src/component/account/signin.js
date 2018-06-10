@@ -48,6 +48,12 @@ class SignInForm extends Component {
       ));
       push('/Landing');
     });
+    auth.doSignInWithEmailAndPassword(email, password)
+      .then((res) => {
+        console.log(res);
+        this.setState(() => ({ email: '', password: '', error: null }));
+        push('/home');
+      });
   };
 
   change (e){

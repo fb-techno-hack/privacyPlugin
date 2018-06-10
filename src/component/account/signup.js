@@ -45,6 +45,8 @@ class SignUpForm extends Component {
         push('/Landing');
       });
     });
+    auth.doCreateUserWithEmailAndPassword(email, passwordOne);
+    push('/info');
   };
 
   change (e) {
