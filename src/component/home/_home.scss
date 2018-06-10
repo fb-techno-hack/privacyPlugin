@@ -12,13 +12,19 @@
   .h3 {
     background-color: black;
   }
-  
+
   .h1headinga {
     padding-top: 1em;
     font-size: 10em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: rgb(75, 187, 206);
     text-align: center;
     color: #fff;
+    text-decoration: none;
+  }
+
+  .h1headinga:hover {
+    color:#CB673B;
   }
   .h1headingb {
     font-size: 20px;
@@ -27,14 +33,14 @@
     margin-top: 20px;
     padding-bottom: 25em;
   }
-  
+
   .headinghome {
     color: rgb(75, 187, 206);
     text-align: center;
     margin-top: 20px;
     font-size: 20px;
   }
-  
+
   .center {
     display: block;
     margin-left: auto;
@@ -43,11 +49,11 @@
     padding-top: 5em;
     padding-bottom: 5em;
   }
-  
+
   .logosize {
     width: 20em;
   }
-  
+
   .aboutheading {
     padding-top: 100px;
     text-align: center;
@@ -56,22 +62,22 @@
     color: rgb(75, 187, 206);
     background-color: #333;
   }
-  
+
   .boxabout {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #333;
   }
-  
+
   .teamimg {
     margin-top: 60px;
     padding: 70px;
     width: 10em;
     margin-left: 40px;
-    
+
   }
-  
+
   .boxabouttext {
     width: 250px;
     height: 140px;
@@ -88,11 +94,11 @@
     margin-bottom: 100px;
     margin-left: 150px;
   }
-  
+
   .sorting-buttons {
     margin-top: 30px;
   }
-  
+
   ul {
     list-style-type: none;
     margin: 0;
@@ -100,40 +106,40 @@
     overflow: hidden;
     background-color: #333;
   }
-  
+
   li {
     float: left;
   }
-  
+
   li a {
     display: block;
     color: white;
     text-align: center;
     text-decoration: none;
   }
-  
+
   .float-right {
     float: right;
   }
-  
+
   li a:hover {
     background-color: rgb(75, 187, 206);
   }
-  
+
   #custom-type-options {
     background-color: #fff;
   }
-  
+
   .search-ul {
     background-color: #aaa;
   }
-  
+
   .application-main {
     margin-bottom: 100px;
   }
-  
+
   .h2 {
-    width: 100%;  
+    width: 100%;
     margin-bottom: 10px;
   }
  .bgImg1 {
@@ -147,4 +153,14 @@
 
  .p-banner {
      width: 5em;
+ }
+
+ .par-button {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 100px;
+  width: 55vw;
+  background-color: #192c3f7d;
+  box-shadow: 0px 0px 23px 4px;
  }

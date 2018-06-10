@@ -3,6 +3,7 @@
     p {
         font-size: 1.5em;
         padding: 0.4em;
+        margin: 30px;
     }
     .box {
         // display: inline-block;
@@ -11,12 +12,12 @@
         background-color: #555;
         width: 100%;
       }
-      
+
       .boximg {
         text-align: center;
-        
+
       }
-    
+
       .infoheading {
         padding-top: 2em;
         text-align: center;
@@ -25,7 +26,7 @@
         color: rgb(75, 187, 206);
         background-color: #555;
       }
-      
+
       .infoimg {
         margin-top: 4em;
         width: 20em;
@@ -41,14 +42,19 @@
         background-color: #555;
         width: 100%;
       }
-      
+
       .boximg {
         text-align: center;
         display: inline-block;
         width: 33%;
         vertical-align: top;
     }
-    
+    .messge {
+      margin: 30px;
+      color: white;
+      line-height: 20px;
+    }
+
       .infoheading {
         padding-top: 2em;
         text-align: center;
@@ -57,7 +63,7 @@
         color: rgb(75, 187, 206);
         background-color: #555;
       }
-      
+
       .infoimg {
         margin-top: 4em;
         width: 10em;
@@ -72,7 +78,7 @@
 //   }
 
   @media (min-width: 525px) {
-	
+
 	.container-three-across {
 
 		.wide {

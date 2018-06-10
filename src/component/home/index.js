@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from './1200x600.gif';
+import {Link} from 'react-router-dom';
 // import bg1 from '../../assets/bg-img1.jpg';
 // import bg2 from '../../assets/bg-img2.jpg';
 // import bg0 from '../../assets/bg-img0.jpg';
@@ -31,22 +32,27 @@ export default class Home extends React.Component {
           <div style={{ height: '40em' }} />
         </Parallax>
 
-        <div 
+        <div
           style={{ height: '6em',
             textAlign: 'center',
             paddingLeft: '2em',
             paddingRight: '2em',
             paddingBottom: '2em',
-          }}> 
-          <strong style={{ 
-            fontSize: '2em',
+          }}>
+          <strong style={{
+            lineHeight: '60px',
+            fontSize: '3em',
             paddingBottom: '0.5em',
-          }}> Hyperledger Supply Chain </strong> 
+          }}> Mission Statment </strong>
           <br />
-          <span>
-  I've been researching this myself for the last few weeks. The short answer to your question is that Hyperledger is fundamentally superior to ethereum for this use case.
-  With ethereum, you are not in control of your network. Every update, every state change of an asset will cost you money. Furthermore, the status of your supply chain (assuming you're using ethereum to asset track) will be completely public which for many companies is inexcusable. And lastly, if there was a mistake or a problem with your supply chain, you would not have the power to easily amend the problem. With ethereum, you do not control your infrastructure.
-  Hyperledger on the other hand is a private ledger system with a robust framework for crafting transactions. Since it's private, your data will not be public and you do not have to depend on mining to update your network. IBM released their findings on using Hyperledger for supply chain, and they suggest using a model dubbed "Proof-of-existance" which would work much better than PoW since transactions could be backed by something that proves that the state change occured (shipping or financial documents). Not to mention updating your state of the supply chain would not cost anything. That alone would invalidate the ethereum candidate.
+          <span style={{
+            lineHeight: '20px',
+          }}>
+          Provide everyone with secure access to the internet
+
+Create a transparent, free market for consumers to monetize their browsing behavior
+
+Help small business know who, when, where, and how to advertise to potential customers
           </span>
         </div>
 
@@ -71,7 +77,7 @@ export default class Home extends React.Component {
           Blur transition from min to max
           <div style={{ height: '800px' }} />
           </Parallax>
-          <ThreeAcross 
+          <ThreeAcross
           imgOne={Ed}
           imgTwo={Dan}
           imgThree={Hector}
@@ -85,7 +91,7 @@ export default class Home extends React.Component {
           Blur transition from min to max
           <div style={{ height: '800px' }} />
         </Parallax> */}
-        <ThreeAcross 
+        <ThreeAcross
           imgOne={Info1}
           imgTwo={Info2}
           imgThree={Info3}
@@ -97,11 +103,10 @@ export default class Home extends React.Component {
           bgImageAlt="the dog"
           strength={200}
         >
-          {/* <p className='h1headinga'>Toni Arakaki</p>
-          <p className='h1headingb'>Okinawa Style</p> */}
+          <h1 className="par-button"><Link className="h1headinga" to={'/sign-up'}>Sign Up</Link></h1>
           {/* <img className='center logosize' src={Logo}/> */}
           <div style={{ height: '40em' }} />
-        </Parallax> 
+        </Parallax>
 
       </div>
     );

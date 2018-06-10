@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Redirect} from 'react-router-dom';
 
 import { RaisedButton, TextField, Paper } from 'material-ui';
-
+import { renderIf } from '../../lib/utils';
 import { SignUpLink } from './signup';
 import { PasswordForgetLink } from './password-forget';
 import { auth } from '../../util/fire';
@@ -24,6 +24,7 @@ class SignInForm extends Component {
     this.state = {
       email: '',
       password: '',
+      redirect: false,
     };
 
     this.submit = this.submit.bind(this);
@@ -37,6 +38,16 @@ class SignInForm extends Component {
     const { email, password } = this.state;
     const { push } = this.props.history;
 
+    auth.doSignInWithEmailAndPassword(email, password).then(() => {
+      this.setState(() => (
+        { email: '',
+          password: '',
+          error: null,
+          redirect: true,
+        }
+      ));
+      push('/Landing');
+    });
     auth.doSignInWithEmailAndPassword(email, password)
       .then((res) => {
         console.log(res);
@@ -47,7 +58,7 @@ class SignInForm extends Component {
 
   change (e){
     this.setState({ [e.target.name]: e.target.value });
-  } 
+  }
 
   render() {
     const { textField } = styles;
@@ -70,6 +81,7 @@ class SignInForm extends Component {
         ))}
 
         <RaisedButton className="main-button" label="Sign In" type="submit" />
+        {renderIf(this.state.redirect, <Redirect to="/Landing" />)}
       </form>
     );
   }

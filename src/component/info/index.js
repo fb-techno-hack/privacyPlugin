@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { renderIf } from '../../lib/utils';
 import SelectBox from '../select-box/index';
 import { Link, Redirect } from 'react-router-dom';
-import * as roomActions from  '../../action/make-room';
 import { doAddSite } from '../../util/db';
 
 class Landing extends React.Component {
@@ -36,7 +35,7 @@ class Landing extends React.Component {
       race: '',
       age: '',
     });
-    this.props.history.push('/home');    
+    this.props.history.push('/download');
   }
 
   render() {

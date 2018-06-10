@@ -3,6 +3,7 @@ import '../style/main.scss';
 
 import React from 'react';
 import Info from './info';
+import Download from './download/index';
 // import Content from './content';
 import Home from './home';
 import Nav from '../component/nav/index';
@@ -62,6 +63,7 @@ class App extends React.Component {
               <Route exact path="/pw-forget" component={PasswordForgetPage} />
               <Route exact path="/account" component={Account} />
               <Route exact path="/info" component={Info}/>
+              <Route exact path="/download" component={Download}/>
             </React.Fragment>
           </BrowserRouter>
         </MuiThemeProvider>
