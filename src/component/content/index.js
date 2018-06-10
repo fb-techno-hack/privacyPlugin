@@ -3,6 +3,7 @@ import './content.scss';
 import {Link, Redirect} from 'react-router-dom';
 import { renderIf } from '../../lib/utils';
 import React from 'react';
+import Accounts from '../account/';
 
 class Content extends React.Component {
   constructor(props) {
@@ -21,7 +22,8 @@ class Content extends React.Component {
     return (
       <div className="home-page">
         <h1 className="home-saying">CUSTOMER DATA MARKET PLACE</h1>
-        <button className="btn-signup" onClick={() => this.setRedirect()}>Sign up</button>
+        <Accounts />
+        {/* <button className="btn-signup" onClick={() => this.setRedirect()}>Sign up</button> */}
         {renderIf(this.state.redirect, <Redirect to="/Landing" />)}
       </div>
     );
