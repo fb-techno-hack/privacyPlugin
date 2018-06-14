@@ -16,11 +16,9 @@ class SignUpForm extends Component {
   constructor(props){
     super(props);
     this.state = {
-      username: '',
       email: '',
       passwordOne: '',
       passwordTwo: '',
-      redirect: false,
     };
 
     this.submit = this.submit.bind(this);
@@ -57,7 +55,6 @@ class SignUpForm extends Component {
     const { textField } = styles;
     const { submit, change } = this;
     const labels = [
-      'Full Name',
       'Email Address',
       'Password',
       'Confirm Password',

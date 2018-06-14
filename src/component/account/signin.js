@@ -24,7 +24,6 @@ class SignInForm extends Component {
     this.state = {
       email: '',
       password: '',
-      redirect: false,
     };
 
     this.submit = this.submit.bind(this);
@@ -81,7 +80,7 @@ class SignInForm extends Component {
         ))}
 
         <RaisedButton className="main-button" label="Sign In" type="submit" />
-        {renderIf(this.state.redirect, <Redirect to="/Landing" />)}
+        {renderIf(this.state.redirect, <Redirect to="/" />)}
       </form>
     );
   }
