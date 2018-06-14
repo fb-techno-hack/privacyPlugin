@@ -3,6 +3,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
+require('dotenv').config();
 
 app.use(express.static(`${__dirname}/build`));
 
@@ -11,5 +12,5 @@ app.get('*',(request,response) => {
 });
 
 app.listen(process.env.PORT,() => {
-  console.log('__SERVER_UP__',process.env.PORT);
+  console.log('_SERVER_UP_',process.env.PORT);
 });
