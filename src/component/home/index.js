@@ -105,7 +105,7 @@ Help small business know who, when, where, and how to advertise to potential cus
         >
           <h1 className="par-button"><Link className="h1headinga" to={'/sign-up'}>Sign Up</Link></h1>
           {/* <img className='center logosize' src={Logo}/> */}
-          <div style={{ height: '40em' }} />
+          <div style={{ height: '20em' }} />
         </Parallax>
 
       </div>
